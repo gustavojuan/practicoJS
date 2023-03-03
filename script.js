@@ -19,3 +19,22 @@ console.log({
   pid,
   input,
 });
+
+
+h1.innerHTML = "Cambiando desde JS <br> feo";
+h1.innerText = "Cambiando desde JS <br> feo";
+h1.setAttribute('class','display-1');
+h1.classList.add('rojo');
+h1.classList.remove('verde');
+console.log(h1.getAttribute('class'));
+
+input.value = "123";
+
+console.log(document.createElement('img'));
+console.log(document.createElement('span'));
+
+const img = document.createElement('img');
+img.setAttribute('src','https://via.placeholder.com/160')
+
+pid.innerHTML = '';
+pid.append(img);
