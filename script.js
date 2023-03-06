@@ -3,11 +3,14 @@ const input1 = document.querySelector("#calculo1");
 const input2 = document.querySelector("#calculo2");
 const btn = document.querySelector("#btnCalcular");
 const presult = document.querySelector("#result");
+const form = document.querySelector("#formulario");
 
-//mejor legibilidad
-btn.addEventListener('click', btnOnClick );
+form.addEventListener("submit", sumaInputValues);
 
-function btnOnClick() {
+function sumaInputValues(event) {
+  event.preventDefault();
+  console.log({ event });
+
   //concatena por default al tratarse de inputs
   let result = Number(input1.value) + Number(input2.value);
   presult.innerText = "Resultado:" + result;
